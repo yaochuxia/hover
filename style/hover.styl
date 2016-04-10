@@ -75,3 +75,48 @@ a.hvr_push:hover
         transform scale(0.8) 
     100%
         transform scale(1)   
+ 
+ a.hvr_pop:hover
+     animation-name hvr_pop
+     animation-duration .3s
+     animation-timing-function linear
+     animation-iteration-count 1
+@keyframes hvr_pop
+    50%
+        transform scale(1.2) 
+
+a.hvr_bounce_in
+    transform translateZ(0)
+    transition-duration 0.5s
+a.hvr_bounce_in:hover
+    transform scale(1.2)
+    transition-timing-function cubic-bezier(0.47, 2.02, 0.31, -0.36)//在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值
+    
+a.hvr_bounce_out
+    transform translateZ(0)
+    transition-duration .5s
+a.hvr_bounce_out:hover
+    transform scale(0.8)
+    transition-timing-function cubic-bezier(0.47, 2.02, 0.31, -0.36)
+
+a.hvr_rotate
+    transform translateZ(0)
+    transition-duration .3s
+    transition-property transform
+a.hvr_rotate:hover
+    transform rotate(4deg) 
+    
+a.hvr_grow_rotate
+    transform translateZ(0)
+    transition-duration .3s
+    transition-property transform
+a.hvr_grow_rotate:hover
+    transform scale(1.1) rotate(4deg) 
+    
+a.hvr_float
+    transform translateZ(0)
+    transition-property transform
+    transition-duration .3s
+    transition-timing-function ease-out //以慢速结束的过渡效果
+a.hvr_float:hover
+    transform translateY(-8px)
