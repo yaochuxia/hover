@@ -1,0 +1,31 @@
+{
+  "name": "hover",
+  "version": "1.0.0",
+  "description": "CSS3 的鼠标悬停效果和动画，这些可以非常轻松的被应用到按钮、LOGO 以及图片等元素。所有这些效果都是只需要单一的标签，必要的时候使用 before 和 after 伪元素。因为使用了 CSS3 过渡、转换和动画效果，因此只支持 Chrome、Firefox 和 Safari 等现代浏览器。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaochuxia/hover.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaochuxia/hover/issues"
+  },
+  "homepage": "https://github.com/yaochuxia/hover#readme",
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-stylus": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "nib": "^1.1.0",
+    "gulp-rename": "^1.2.2"
+  },
+  "devDependencies": {}
+}
