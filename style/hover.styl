@@ -27,19 +27,19 @@ a[class^="hvr_"]
     backface-visibility hidden //隐藏被旋转的元素的背面
 
 // 2D Transitions
-a.hvr_grow
+.hvr_grow
     transition-duration .3s  //定义过渡效果花费的时间
     transition-property transform //规定应用过渡的 CSS 属性的名称
     &:hover
         transform scale(1.1) //放大 
     
-a.hvr_shrink
+.hvr_shrink
     transition-duration .3s  
     transition-property transform 
     &:hover
         transform scale(0.9) //缩小
 
-a.hvr_pulse:hover
+.hvr_pulse:hover
     animation-name hvr_pulse
     animation-duration 1s
     animation-iteration-count infinite //动画被播放的次数, infinite 动画应该无限次播放
@@ -49,7 +49,7 @@ a.hvr_pulse:hover
     75%  
         transform scale(0.9)
     
-a.hvr_pulse_grow:hover
+.hvr_pulse_grow:hover
     animation-name hvr_pulse_grow
     animation-duration .3s
     animation-iteration-count infinite
@@ -58,7 +58,7 @@ a.hvr_pulse_grow:hover
     to
         transform scale(1.1)    
   
-a.hvr_pulse_shrink:hover
+.hvr_pulse_shrink:hover
     animation-name hvr_pulse_shrink
     animation-duration .3s
     animation-timing-function linear //动画的速度曲线, linear动画从头到尾的速度是相同的。
@@ -68,7 +68,7 @@ a.hvr_pulse_shrink:hover
     to
         transform scale(0.9)
 
-a.hvr_push:hover
+.hvr_push:hover
     animation-name hvr_push
     animation-duration .3s
     animation-timing-function linear
@@ -79,7 +79,7 @@ a.hvr_push:hover
     100%
         transform scale(1)   
  
- a.hvr_pop:hover
+ .hvr_pop:hover
      animation-name hvr_pop
      animation-duration .3s
      animation-timing-function linear
@@ -88,35 +88,35 @@ a.hvr_push:hover
     50%
         transform scale(1.2) 
 
-a.hvr_bounce_in
+.hvr_bounce_in
     transform translateZ(0)
     transition-duration 0.5s
     &:hover
         transform scale(1.2)
         transition-timing-function cubic-bezier(0.47, 2.02, 0.31, -0.36)//在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值
     
-a.hvr_bounce_out
+.hvr_bounce_out
     transform translateZ(0)
     transition-duration .5s
     &:hover
         transform scale(0.8)
         transition-timing-function cubic-bezier(0.47, 2.02, 0.31, -0.36)
 
-a.hvr_rotate
+.hvr_rotate
     transform translateZ(0)
     transition-duration .3s
     transition-property transform
     &:hover
         transform rotate(4deg) 
     
-a.hvr_grow_rotate
+.hvr_grow_rotate
     transform translateZ(0)
     transition-duration .3s
     transition-property transform
     &:hover
         transform scale(1.1) rotate(4deg) 
     
-a.hvr_float
+.hvr_float
     transform translateZ(0)
     transition-property transform
     transition-duration .3s
@@ -124,14 +124,14 @@ a.hvr_float
     &:hover
         transform translateY(-8px)
 
-a.hvr_sink
+.hvr_sink
     transition-duration .3s
     transition-timing-function ease-out
     transition-property transform
     &:hover
         transform translateY(8px)
 
-a.hvr_bob:hover
+.hvr_bob:hover
     animation-name hvr_bob_float,hvr_bob
     animation-duration .3s, 1.5s
     animation-delay 0s, .3s //规定动画何时开始。默认是 0
@@ -150,7 +150,7 @@ a.hvr_bob:hover
     100%
         transform translateY(-8px)
     
-a.hvr_hang:hover
+.hvr_hang:hover
     animation-name hvr_hang_sink,hvr_hang
     animation-duration .3s, 1.5s
     animation-delay 0s, .3s
@@ -169,27 +169,27 @@ a.hvr_hang:hover
     100%
         transform translateY(8px)    
 
-a.hvr_skew
+.hvr_skew
     transition-duration .3s
     transition-property transform
     &:hover
         transform skew(-10deg) //定义沿着 X 和 Y 轴的 2D 倾斜转换。
  
-a.hvr_skew_forward
+.hvr_skew_forward
     transition-duration .3s
     transition-property transform
     transform-origin 0 100% //允许你改变被转换元素的位置
     &:hover
         transform skew(-10deg)
 
-a.hvr_skew_backward
+.hvr_skew_backward
     transition-duration .3s
     transition-property transform
     transform-origin 0 100% //允许你改变被转换元素的位置
     &:hover
         transform skew(10deg)
     
-a.hvr_wobble_horizontal:hover
+.hvr_wobble_horizontal:hover
     animation-name hvr_wobble_horizontal
     animation-duration 1s
     animation-timing-function ease-in-out
@@ -208,7 +208,7 @@ a.hvr_wobble_horizontal:hover
     100%
         transform translateX(0px)
 
-a.hvr_wobble_vertical:hover
+.hvr_wobble_vertical:hover
     animation-name hvr_wobble_vertical
     animation-timing-function ease-in-out
     animation-duration 1s
@@ -227,7 +227,7 @@ a.hvr_wobble_vertical:hover
     100%
         transform translateY(0px)
         
-a.hvr_wobble_to_bottom_right:hover
+.hvr_wobble_to_bottom_right:hover
     animation-name hvr_wobble_to_bottom_right
     animation-duration 1s
     animation-timing-function ease-in-out
@@ -246,7 +246,7 @@ a.hvr_wobble_to_bottom_right:hover
     100%
         transform translate(0px, 0px)
 
-a.hvr_wobble_to_top_right:hover
+.hvr_wobble_to_top_right:hover
     animation-name hvr_wobble_to_top_right
     animation-duration 1s
     animation-timing-function ease-in-out
@@ -265,7 +265,7 @@ a.hvr_wobble_to_top_right:hover
     100%
         transform translate(0px, 0px)
 
-a.hvr_wobble_top
+.hvr_wobble_top
     transform-origin 0 100%
     &:hover
         animation-name hvr_wobble_top
@@ -286,7 +286,7 @@ a.hvr_wobble_top
     100%
         transform skew(0)
 
-a.hvr_wobble_bottom
+.hvr_wobble_bottom
     transform-origin 100% 0
     &:hover
         animation-name hvr_wobble_bottom
@@ -307,7 +307,7 @@ a.hvr_wobble_bottom
     100%
         transform skew(0)
         
-a.hvr_wobble_skew:hover
+.hvr_wobble_skew:hover
     animation-name hvr_wobble_skew
     animation-duration 1s
     animation-timing-function ease-in-out
@@ -326,7 +326,7 @@ a.hvr_wobble_skew:hover
     100%
         transform skew(0)
     
-a.hvr_buzz:hover
+.hvr_buzz:hover
     animation-name hvr_buzz
     animation-duration 0.15s
     animation-timing-function linear
@@ -337,7 +337,7 @@ a.hvr_buzz:hover
     100%
         transform translateX(-3px) rotate(-2deg)
 
-a.hvr_buzz_out:hover
+.hvr_buzz_out:hover
     animation-name hvr_buzz_out
     animation-duration 0.75s
     animation-timing-function linear
@@ -367,13 +367,13 @@ a.hvr_buzz_out:hover
 
 
 //background Transitions
-a.hvr_fade
+.hvr_fade
     transition-duration .3s
     transition-property color, background-color
     &:hover
         color #fff
         background-color #0275d8
-a.hvr_back_pulse
+.hvr_back_pulse
     transition-duration .5s
     transition-property color, background-color
     &:hover
@@ -388,7 +388,7 @@ a.hvr_back_pulse
     50%
         background-color rgba(32, 152, 209, 0.75)
         
-a.hvr_sweep_to_right
+.hvr_sweep_to_right
     position relative
     transition-property color 
     transition-duration .3s
@@ -411,7 +411,7 @@ a.hvr_sweep_to_right
     &:hover:before
         transform scaleX(1)  
 
-a.hvr_sweep_to_left
+.hvr_sweep_to_left
     position relative
     transition-property color
     transition-duration .3s
@@ -434,7 +434,7 @@ a.hvr_sweep_to_left
     &:hover:before
         transform scaleX(1)
         
-a.hvr_sweep_to_bottom
+.hvr_sweep_to_bottom
     position relative
     transition-property color
     transition-duration .3s
@@ -457,7 +457,7 @@ a.hvr_sweep_to_bottom
     &:hover:before
         transform scaleY(1)
 
-a.hvr_sweep_to_top
+.hvr_sweep_to_top
     position relative
     transition-property color
     transition-duration .3s
