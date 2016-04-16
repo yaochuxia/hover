@@ -12,7 +12,7 @@ gulp.task('default', ['stylus']);
 
 // 侦听文件改变执行任务
 gulp.task('watch', function (cb) {
-    gulp.watch('./styl/**/*', ['stylus']);
+    gulp.watch('./styl/**/*', ['stylus','copy']);
 });
 
 
@@ -26,5 +26,3 @@ gulp.task('stylus',function(){
         .pipe(rename('hover.min.css'))//重命命
         .pipe(gulp.dest('./build/css/'));//压缩到的文件夹
 })
-
-
