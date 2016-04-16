@@ -1023,4 +1023,22 @@ a[class^="hvr_"]
         transition-timing-function ease-out
     &:hover:before
         left 0
+     
+   
+.hvr_icon_back
+    position relative
+    padding-left 2.2em !important
+    transition-duration .3s
+    &:before
+        content "\f137"
+        position absolute
+        left 1em
+        padding 0 1px
+        font-family FontAwesome
+        transform translateZ(0)
+        transition-duration .1s
+        transition-timing-function ease-out
+        transform translateZ(0)
+    &:hover:before
+        transform translateX(-4px)
         
