@@ -1024,21 +1024,716 @@ a[class^="hvr_"]
     &:hover:before
         left 0
      
-   
+
+a[class^="hvr_icon_"]
+    position relative
+    padding-right 2.2em
+    &:before
+        position absolute 
+        right 1em
+        padding 0 1px
+        font-family FontAwesome
+
 .hvr_icon_back
     position relative
     padding-left 2.2em !important
-    transition-duration .3s
+    transition-duration .1s
     &:before
         content "\f137"
+        left 1em !important
+        transition-duration .1s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        transform translateX(-4px)
+ 
+.hvr_icon_forward
+    transition-duration .1s
+    &:before
+        content "\f138"
+        transition-property transform
+        transition-duration .1s
+        transition-timing-function ease-out
+    &:hover:before
+        transform translateX(4px)
+
+.hvr_icon_down
+    &:before
+        content "\f01a"
+        padding 0 1px
+    &:hover:before
+        animation-name hvr_icon_down
+        animation-duration .75s
+        animation-timing-function ease-out
+@keyframes hvr_icon_down
+    0%, 50%,100%
+        transform translateY(0)
+    25%, 75%
+        transform translateY(6px)    
+
+.hvr_icon_up
+    &:before
+        content "\f01b"
+    &:hover:before
+        animation-name hvr_icon_up
+        animation-duration .75s
+        animation-timing-function ease-out
+@keyframes hvr_icon_up
+    0%, 50%, 100%
+        transform translateY(0)
+    25%, 75%
+        transform translateY(-6px)
+
+.hvr_icon_spin
+    &:before
+        content "\f021"
+        transition-property transform
+        transition-duration 1s
+        transition-timing-function ease-in-out
+    &:hover:before
+        transform rotate(360deg)
+        
+
+.hvr_icon_drop
+    &:before
+        content "\f041"
+    &:hover:before
+        opacity 0
+        transition-duration .3s
+        animation-name hvr_icon_drop
+        animation-duration .5s
+        animation-delay .3s
+        animation-fill-mode forwards
+        animation-timing-function ease-in-out
+        animation-timing-function cubic-bezier(0.52, 1.64, 0.37, 0.66)
+@keyframes hvr_icon_drop
+    0%
+        opacity 0
+    50%
+        opacity 0
+        transform translateY(-100%)
+    51%, 100%
+        opacity 1
+        
+.hvr_icon_fade
+    &:before
+        content "\f00c"
+        transition-duration .5s
+        transition-property color
+    &:hover:before
+        color #0F9E5E
+        
+.hvr_icon_float_away
+    &:before, &:after
+        content "\f055"
         position absolute
-        left 1em
+        right 1em
         padding 0 1px
         font-family FontAwesome
         transform translateZ(0)
-        transition-duration .1s
-        transition-timing-function ease-out
-        transform translateZ(0)
-    &:hover:before
-        transform translateX(-4px)
+    &:after
+        opacity 0
+        animation-duration .5s
+        animation-fill-mode forwards
+    &:hover:after
+        animation-name hvr_icon_float_away
+        animation-timing-function ease-out
+@keyframes hvr_icon_float_away
+    0%
+        opacity 1
+    100%
+        opacity 0
+        transform translateY(-1em)
         
+.hvr_icon_sink_away
+    &:before, &:after
+        content "\f056"
+        position absolute
+        right 1em
+        padding 0 1px
+        font-family FontAwesome
+        transform translateZ(0)
+    &:after
+        opacity 0
+        animation-duration .5s
+        animation-fill-mode forwards
+    &:hover:after
+        animation-name hvr_icon_sink_away
+        animation-timing-function ease-out
+@keyframes hvr_icon_sink_away
+    0%
+        opacity 1
+    100%
+        opacity 0
+        transform translateY(1em)       
+
+.hvr_icon_grow
+    transition-duration .3s
+    &:before 
+        content "\f118"
+        transition-duration .3s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        transform scale(1.3) translateZ(0)
+        
+        
+.hvr_icon_shrink
+    transition-duration .3s
+    &:before 
+        content "\f119"
+        transition-duration .3s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        transform  scale(0.8)
+.hvr_icon_pulse
+    &:before
+        content "\f015"
+        transition-timing-function ease-out
+    &:hover:before
+        animation-name hvr_icon_pulse
+        animation-duration 1s
+        animation-timing-function linear
+        animation-iteration-count infinite
+@keyframes hvr_icon_pulse
+    25%
+        transform scale(1.3)
+    75%
+        transform scale(0.8)
+        
+.hvr_icon_pulse_grow
+    &:before
+        content "\f015"
+        transition-timing-function ease-out
+    &:hover:before
+        animation-name hvr_icon_pulse_grow
+        animation-duration .3s
+        animation-timing-function linear
+        animation-iteration-count infinite
+        animation-direction alternate
+@keyframes hvr_icon_pulse_grow
+    to
+        transform scale(1.3)
+
+.hvr_icon_pulse_shrink
+    &:before 
+        content "\f015"
+        transition-timing-function ease-out
+    &:hover:before
+        animation-name hvr_icon_pulse_shrink
+        animation-duration .3s
+        animation-timing-function linear
+        animation-iteration-count infinite
+        animation-direction alternate
+@keyframes hvr_icon_pulse_shrink
+    to
+        transform scale(0.8)
+
+.hvr_icon_push
+    transition-duration .3s
+    &:before
+        content "\f006"
+        transition-property transform
+        transition-duration .3s
+        transition-timing-function ease-out
+    &:hover:before
+        animation-name hvr_icon_push
+        animation-duration .3s
+        animation-timing-function linear
+        animation-iteration-count 1
+@keyframes hvr_icon_push
+    50%
+        transform scale(0.5)
+
+.hvr_icon_pop
+    transition-duration .3s
+    &:before
+        content "\f005"
+        transition-duration .3s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        animation-name hvr_icon_pop
+        animation-duration .3s
+        animation-timing-function linear
+        animation-iteration-count 1
+@keyframes hvr_icon_pop
+    50%
+        transform scale(1.5)
+        
+.hvr_icon_bounce
+    transition-duration .3s
+    &:before
+        content "\f087"
+        transition-duration .3s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        transform scale(1.5)
+        transition-timing-function cubic-bezier(0.47, 2.02, 0.31, -0.36)
+        
+.hvr_icon_rotate
+    transition-duration .3s
+    &:before
+        content "\f0c6"
+        transition-duration .3s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        transform rotate(20deg)
+
+.hvr_icon_grow_rotate
+    transition-duration .3s
+    &:before
+        content "\f095"
+        transition-duration .3s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        transform scale(1.5) rotate(12deg)
+        
+.hvr_icon_float
+    transition-duration .3s
+    &:before
+        content "\f01b"
+        transition-duration .3s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        transform translateY(-4px)
+
+.hvr_icon_sink
+    transition-duration .3s
+    &:before
+        content "\f01a"
+        transition-duration .3s
+        transition-property transform
+        transition-timing-function ease-out
+    &:hover:before
+        transform translateY(4px)
+        
+.hvr_icon_bob
+    transition-duration .3s
+    &:before
+        content "\f077"
+    &:hover:before
+        animation-name hvr_icon_bob_float, hvr_icon_sink
+        animation-duration .3s, 1.5s
+        animation-delay 0s, .3s
+        animation-timing-function ease-out, ease-in-out
+        animation-iteration-count 1, infinite
+        animation-fill-mode forwards 
+@keyframes hvr_icon_bob
+    0%
+        transform translateY(-6px)
+    50%
+        transform translateY(-2px)
+    100%
+        transform translateY(-6px)
+@keyframes hvr_icon_bob_float
+    100%
+        transform translateY(-6px)        
+.hvr_icon_hang
+    transition-duration .3s
+    &:before
+        content "\f078"
+    &:hover:before
+        animation-name hvr_icon_hang_sink, hvr_icon_hang
+        animation-duration .3s, 1.5s
+        animation-delay 0s, .3s
+        animation-timing-function ease-out, ease-in-out
+        animation-iteration-count 1, infinite
+        animation-fill-mode forwards 
+@keyframes hvr_icon_hang
+    0%
+        transform translateY(6px)
+    50%
+        transform translateY(2px)
+    100%
+        transform translateY(6px)
+@keyframes hvr_icon_hang_sink
+    100%
+        transform translateY(6px)
+    
+               
+.hvr_icon_wobble_horizontal
+    transition-duration .3s
+    &:before
+        content "\f061"
+    &:hover:before
+        animation-name hvr_icon_wobble_horizontal
+        animation-duration 1s
+        animation-timing-function ease-in-out
+        animation-iteration-count 1
+@keyframes hvr_icon_wobble_horizontal
+    16.65%
+        transform translateX(6px)
+    33.3%
+        transform translateX(-5px)
+    49.95%
+        transform translateX(4px)
+    66.6%
+        transform translateX(-2px)
+    83.25%
+        transform translateX(1px)
+    100%
+        transform translateX(0)
+
+.hvr_icon_wobble_vertical
+    transition-duration .3s
+    &:before
+        content "\f062"
+    &:hover:before
+        animation-name hvr_icon_wobble_vertical
+        animation-duration 1s
+        animation-timing-function ease-in-out
+        animation-iteration-count 1
+@keyframes hvr_icon_wobble_vertical
+    16.65%
+        transform translateY(6px)
+    33.3%
+        transform translateY(-5px)
+    49.95%
+        transform translateY(4px)
+    66.6%
+        transform translateY(-2px)
+    83.25%
+        transform translateY(1px)
+    100%
+        transform translateY(0)
+
+ 
+.hvr_icon_buzz
+    transition-duration .3s
+    &:before
+        content "\f017"
+    &:hover:before
+        animation-name hvr_icon_buzz
+        animation-duration 0.15s
+        animation-timing-function linear
+        animation-iteration-count infinite
+@keyframes hvr_icon_buzz
+    50%
+        transform translateX(3px) rotate(2deg)
+    100%
+        transform translateX(-3px) rotate(-2deg)
+
+.hvr_icon_buzz_out
+    transition-duration .3s
+    &:before
+        content "\f023"
+    &:hover:before
+        animation-name hvr_icon_buzz_out
+        animation-duration 0.75s
+        animation-timing-function linear
+        animation-iteration-count 1
+@keyframes hvr_icon_buzz_out
+    10%
+        transform translateX(3px) rotate(2deg)
+    20%
+        transform translateX(-3px) rotate(-2deg)
+    30%
+        transform translateX(3px) rotate(2deg)
+    40%
+        transform translateX(-3px) rotate(-2deg)
+    50%
+        transform translateX(2px) rotate(1deg)
+    60%
+        transform translateX(-2px) rotate(-1deg)
+    70%
+        transform translateX(2px) rotate(1deg)
+    80%
+        transform translateX(-2px) rotate(-1deg)
+    90%
+        transform translateX(1px) rotate(0)
+    100%
+        transform translateX(-1px) rotate(0)
+
+
+.hvr_shadow
+    transition-duration .3s
+    transition-property box-shadow
+    &:hover
+        box-shadow 0 10px 10px -10px rgba(0, 0, 0, 0.5)
+        
+.hvr_grow_shadow
+    transition-duration .3s
+    transition-property box-shadow, transform
+    &:hover
+        box-shadow  0 10px 10px -10px rgba(0, 0, 0, 0.5)
+        transform scale(1.1)
+        
+.hvr_float_shadow
+    transition-duration .3s
+    transition-property transform
+    &:before
+        pointer-events none
+        position absolute
+        z-index -1
+        content ''
+        top 100%
+        left 5%
+        height 10px
+        width 90%
+        opacity 0
+        background radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%)
+        transition-duration 0.3s
+        transition-property transform, opacity 
+    &:hover
+        transform translateY(-5px)
+    &:hover:before
+        opacity 1
+        transform translateY(5px)
+
+.hvr_glow
+    transition-duration .3s
+    transition-property box-shadow
+    &:hover
+        box-shadow 0 0 8px rgba(0, 0, 0, 0.6)
+        
+.hvr_shadow_radial
+    &:before, &:after
+        pointer-events none
+        position absolute
+        content ''
+        left 0
+        width 100%
+        box-sizing border-box
+        background-repeat no-repeat
+        height 5px
+        opacity 0
+        transition-duration 0.3s
+        transition-property opacity  
+    &:before
+        bottom 100%
+        background radial-gradient(ellipse at 50% 150%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%)
+    &:after
+        top 100%
+        background radial-gradient(ellipse at 50% -50%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 80%)
+    &:hover:before, &:hover:after
+        opacity 1
+
+.hvr_box_shadow_qutset
+    transition-duration .3s
+    transition-property box-shadow
+    &:hover
+        box-shadow 2px 2px 2px rgba(0, 0, 0, 0.6)
+        
+.hvr_box_shadow_inset
+    transition-duration .3s
+    transition-property box-shadow
+    box-shadow 0 0 0 rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0)
+    &:hover
+        box-shadow inset 2px 2px 2px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0)
+
+.hvr_bubble_top
+    &:before
+        content ""
+        position absolute
+        left calc(50% - 10px)
+        top 0
+        border-width 0 10px 10px 10px
+        border-color transparent transparent #e1e1e1 transparent
+        z-index -1
+        border-style solid
+        transition-duration .3s
+        transition-property transform
+    &:hover:before
+        transform translateY(-10px)
+
+.hvr_bubble_right
+    &:before
+        content ""
+        position absolute
+        z-index -1
+        right 0
+        top calc(50% - 10px)
+        border-width 10px 0 10px 10px
+        border-color transparent transparent transparent #e1e1e1
+        z-index -1
+        border-style solid
+        transition-duration .3s
+        transition-property transform
+    &:hover:before
+        transform translateX(10px)
+        
+.hvr_bubble_bottom
+    &:before
+        content ""
+        position absolute
+        z-index -1
+        left calc(50% - 10px)
+        bottom 0
+        border-width 10px 10px 0 10px
+        border-color #e1e1e1 transparent transparent transparent
+        z-index -1
+        border-style solid
+        transition-duration .3s
+        transition-property transform
+    &:hover:before
+        transform translateY(10px)
+    
+.hvr_bubble_left
+    &:before
+        content ""
+        position absolute
+        left 0
+        top calc(50% - 10px)
+        border-width 10px 10px 10px 0
+        border-color transparent #e1e1e1 transparent transparent
+        border-style solid
+        transition-duration .3s
+        transition-property transform
+    &:hover:before
+        transform translateX(-10px)
+
+.hvr_bubble_float_top
+    transition-duration .3s
+    transition-property transform
+    &:before
+        position absolute
+        z-index -1
+        content ''
+        left calc(50% - 10px)
+        top 0
+        border-style solid
+        border-width 0 10px 10px 10px
+        border-color transparent transparent #e1e1e1 transparent
+        transition-duration 0.3s
+        transition-property transform
+    &:hover
+        transform translateY(10px)
+    &:hover:before
+        transform translateY(-10px)
+        
+.hvr_bubble_float_right
+    transition-duration .3s
+    transition-property transform
+    &:before
+        position absolute
+        z-index -1
+        top calc(50% - 10px)
+        right 0
+        content ''
+        border-style solid
+        border-width 10px 0 10px 10px
+        border-color transparent transparent transparent #e1e1e1
+        transition-duration 0.3s
+        transition-property transform 
+    &:hover
+        transform translateX(-10px)
+    &:hover:before
+        transform translateX(10px)
+        
+.hvr_bubble_float_bottom
+    transition-duration .3s
+    transition-property transform
+    &:before
+        position absolute
+        z-index -1
+        content ''
+        left calc(50% - 10px)
+        bottom 0
+        border-style solid
+        border-width 10px 10px 0 10px
+        border-color #e1e1e1 transparent transparent transparent
+        transition-duration 0.3s
+        transition-property transform
+    &:hover
+        transform translateY(-10px)
+    &:hover:before
+        transform translateY(10px)
+        
+.hvr_bubble_float_left
+    transition-duration .3s
+    transition-property transform
+    &:before
+        position absolute
+        z-index -1
+        content ''
+        top calc(50% - 10px)
+        left 0
+        border-style solid
+        border-width 10px 10px 10px 0
+        border-color transparent #e1e1e1 transparent transparent
+        transition-duration 0.3s
+        transition-property transform
+    &:hover
+        transform translateX(10px)
+    &:hover:before
+        transform translateX(-10px)
+        
+.hvr_curl_top_left
+    &:before
+        pointer-events none
+        position absolute
+        content ''
+        height 0
+        width 0
+        top 0
+        left 0
+        background #ffffff
+        background linear-gradient(135deg, #ffffff 45%, #aaaaaa 50%, #cccccc 56%, #ffffff 80%)
+        z-index 1000
+        box-shadow 1px 1px 1px rgba(0, 0, 0, 0.4)
+        transition-duration 0.3s
+        transition-property width,height
+    &:hover:before
+        width 25px
+        height 25px
+     
+.hvr_curl_top_right
+    &:before
+        pointer-events none
+        position absolute
+        content ''
+        height 0
+        width 0
+        top 0
+        right 0
+        background #fff
+        background linear-gradient(225deg, #fff 45%, #aaaaaa 50%, #cccccc 56%, #fff 80%)
+        box-shadow -1px 1px 1px rgba(0, 0, 0, 0.4)
+        transition-duration 0.3s
+        transition-property width, height
+    &:hover:before
+        width 25px
+        height 25px
+        
+
+.hvr_curl_bottom_right
+    &:before
+        pointer-events none
+        position absolute
+        content ''
+        height 0
+        width 0
+        bottom 0
+        right 0
+        background #fff
+        background linear-gradient(315deg, #fff 45%, #aaaaaa 50%, #cccccc 56%, #fff 80%)
+        box-shadow -1px -1px 1px rgba(0, 0, 0, 0.4)
+        transition-duration 0.3s
+        transition-property width, height
+    &:hover:before
+        width 25px
+        height 25px
+
+.hvr_curl_bottom_left
+    &:before
+        pointer-events none
+        position absolute
+        content ''
+        height 0
+        width 0
+        bottom 0
+        left 0
+        background #fff
+        background linear-gradient(45deg, #fff 45%, #aaaaaa 50%, #cccccc 56%, #fff 80%)
+        box-shadow 1px -1px 1px rgba(0, 0, 0, 0.4)
+        transition-duration 0.3s
+        transition-property: width, height
+    &:hover:before
+        width 25px
+        height 25px
