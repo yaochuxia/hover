@@ -34,7 +34,7 @@ var browserslist = ['Android 2.3', 'Android >= 4', 'Chrome >= 20', 'Firefox >= 2
 
 直接在页面中引用`./build/css/hover.min.css`
 
-```
+```html
 <link rel="stylesheet" href="./build/css/hover.min.css">
 <a href="#" class="hvr_pulse_grow">Pulse Grow</a>
 ```
